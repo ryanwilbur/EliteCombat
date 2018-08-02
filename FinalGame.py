@@ -273,7 +273,7 @@ def teleBossRoom(t1,t2):
         userHeathTurt.write(mainHeathuser, font=('Times New Roman', 20, 'normal'))
         room = 3
     elif d <= 50 and room == 3:
-        windowPic = 'MainRoom.gif'
+        windowPic = 'src/MainRoom.gif'
         window.bgpic(windowPic)
         jackHeath.showturtle()
         jackSpeed.showturtle()
@@ -290,8 +290,6 @@ def teleBossRoom(t1,t2):
         enemyHeathTurt.write(heath, font=('Times New Roman', 20, 'normal'))
         room = 0
     return
-print ('swagggggggggggggggggggggggg')
-print("THIS GAME IS TUFFF")
 windowPic = 'src/TittleScreen.gif'
 room = 0
 #MainRoom = 0
@@ -311,7 +309,7 @@ ranStr2 = 10
 strength = random.randint(ranStr1,ranStr2)
 
 
-userImage = ('src/user.gif')
+userImage = ('src/User.gif')
 userAttack = ('src/UserAttack.gif')
 userShield = ('src/UserShield.gif')
 
@@ -553,8 +551,8 @@ pointTurtle.pendown()
 pointTurtle.pencolor('white')
 pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
 
-windowPic = 'MainRoom.gif'
-window.bgpic('MainRoom.gif')
+windowPic = 'src/MainRoom.gif'
+window.bgpic('src/MainRoom.gif')
 user.showturtle()
 turtInRoom = 1
 T = 1
@@ -594,7 +592,7 @@ while gameOn == True:
 
     #main to top
     if userY > 398 and userX > -200 and userX < 200 and room == 0:
-        windowPic = 'TopRoom.gif'
+        windowPic = 'src/TopRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(userX,-395)
@@ -607,7 +605,7 @@ while gameOn == True:
         teleportTurt.goto(1000,1000)
     #main to right
     if userX > 398 and userY > -200 and userY < 200 and room == 0:
-        windowPic = 'RightRoom.gif'
+        windowPic = 'src/RightRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(-395,userY)
@@ -620,7 +618,7 @@ while gameOn == True:
         teleportTurt.goto(1000,1000)
     #top to main
     if userY < -398 and userX > -200 and userX < 200 and room == 1:
-        windowPic = 'MainRoom.gif'
+        windowPic = 'src/MainRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(userX,395)
@@ -637,7 +635,7 @@ while gameOn == True:
         turtInRoom = 1
     #right to main
     if userX < -398 and userY > -200 and userY < 200 and room == 2:
-        windowPic = 'MainRoom.gif'
+        windowPic = 'src/MainRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(395,userY)
