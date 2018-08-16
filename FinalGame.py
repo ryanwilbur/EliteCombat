@@ -273,7 +273,7 @@ def teleBossRoom(t1,t2):
         userHeathTurt.write(mainHeathuser, font=('Times New Roman', 20, 'normal'))
         room = 3
     elif d <= 50 and room == 3:
-        windowPic = 'MainRoom.gif'
+        windowPic = 'src/MainRoom.gif'
         window.bgpic(windowPic)
         jackHeath.showturtle()
         jackSpeed.showturtle()
@@ -290,24 +290,7 @@ def teleBossRoom(t1,t2):
         enemyHeathTurt.write(heath, font=('Times New Roman', 20, 'normal'))
         room = 0
     return
-print ('swagggggggggggggggggggggggg')
-print("THIS GAME IS TUFFF")
-'''
-def bounce(turt):
-    global room
-    if abs(turt.xcor()) >= 318 and room == 0:
-        if (turt.ycor()) >= 200 and (turt.ycor()) <= 200 and turt.xcor()<0:
-            turt.goto(-317,user.ycor())
-            print('h')
-    if abs(turt.ycor()) >= 318 and room == 0:
-        if (turt.xcor()) >= 200 and (turt.xcor()) <= 200 and turt.ycor()<0:
-            turt.goto(turt.xcor(),-317)
-
-    if (turt.xcor() >318 and turt.xcor() <-318) and (turt.ycor() >318 and turt.ycor() <-318):
-        turt.goto(turt.xcor(),-317)
-    return
-'''
-windowPic = 'TittleScreen.gif'
+windowPic = 'src/TittleScreen.gif'
 room = 0
 #MainRoom = 0
 #TopRoom = 1
@@ -326,41 +309,41 @@ ranStr2 = 10
 strength = random.randint(ranStr1,ranStr2)
 
 
-userImage = ('user.gif')
-userAttack = ('UserAttack.gif')
-userShield = ('UserShield.gif')
+userImage = ('src/User.gif')
+userAttack = ('src/UserAttack.gif')
+userShield = ('src/UserShield.gif')
 
-strengthUpgrade = ('strength.gif')
-speedUpgrade = ('speed.gif')
-healthUpgrade = ('health.gif')
+strengthUpgrade = ('src/strength.gif')
+speedUpgrade = ('src/speed.gif')
+healthUpgrade = ('src/health.gif')
 
 window.addshape(strengthUpgrade)
 window.addshape(speedUpgrade)
 window.addshape(healthUpgrade)
 
-boss = ('Boss.gif')
-bossAttack = ('BossAttack.gif')
-bossRoom = ('BossRoom.gif')
-enemy1 = ('Enemy1.gif')
-enemy2 = ('Enemy2.gif')
-enemy3 = ('Enemy3.gif')
-enemy4 = ('Enemy4.gif')
-enemy5 = ('Enemy5.gif')
-enemy6 = ('Enemy6.gif')
-enemy7 = ('Enemy7.gif')
-enemy8 = ('Enemy8.gif')
-enemy9 = ('Enemy9.gif')
+boss = ('src/Boss.gif')
+bossAttack = ('src/BossAttack.gif')
+bossRoom = ('src/BossRoom.gif')
+enemy1 = ('src/Enemy1.gif')
+enemy2 = ('src/Enemy2.gif')
+enemy3 = ('src/Enemy3.gif')
+enemy4 = ('src/Enemy4.gif')
+enemy5 = ('src/Enemy5.gif')
+enemy6 = ('src/Enemy6.gif')
+enemy7 = ('src/Enemy7.gif')
+enemy8 = ('src/Enemy8.gif')
+enemy9 = ('src/Enemy9.gif')
 
 
-enemy1Attack = ('Enemy11.gif')
-enemy2Attack = ('Enemy22.gif')
-enemy3Attack = ('Enemy33.gif')
-enemy4Attack = ('Enemy44.gif')
-enemy5Attack = ('Enemy55.gif')
-enemy6Attack = ('Enemy66.gif')
-enemy7Attack = ('Enemy77.gif')
-enemy8Attack = ('Enemy88.gif')
-enemy9Attack = ('Enemy99.gif')
+enemy1Attack = ('src/Enemy11.gif')
+enemy2Attack = ('src/Enemy22.gif')
+enemy3Attack = ('src/Enemy33.gif')
+enemy4Attack = ('src/Enemy44.gif')
+enemy5Attack = ('src/Enemy55.gif')
+enemy6Attack = ('src/Enemy66.gif')
+enemy7Attack = ('src/Enemy77.gif')
+enemy8Attack = ('src/Enemy88.gif')
+enemy9Attack = ('src/Enemy99.gif')
 
 window.addshape(boss)
 window.addshape(bossAttack)
@@ -402,7 +385,7 @@ stageCount = 1
 heath = 100
 
 time.sleep(2)
-instructions = ('Instructions.gif')
+instructions = ('src/Instructions.gif')
 window.bgpic(instructions)
 
 
@@ -568,8 +551,8 @@ pointTurtle.pendown()
 pointTurtle.pencolor('white')
 pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
 
-windowPic = 'MainRoom.gif'
-window.bgpic('MainRoom.gif')
+windowPic = 'src/MainRoom.gif'
+window.bgpic('src/MainRoom.gif')
 user.showturtle()
 turtInRoom = 1
 T = 1
@@ -609,7 +592,7 @@ while gameOn == True:
 
     #main to top
     if userY > 398 and userX > -200 and userX < 200 and room == 0:
-        windowPic = 'TopRoom.gif'
+        windowPic = 'src/TopRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(userX,-395)
@@ -622,7 +605,7 @@ while gameOn == True:
         teleportTurt.goto(1000,1000)
     #main to right
     if userX > 398 and userY > -200 and userY < 200 and room == 0:
-        windowPic = 'RightRoom.gif'
+        windowPic = 'src/RightRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(-395,userY)
@@ -635,7 +618,7 @@ while gameOn == True:
         teleportTurt.goto(1000,1000)
     #top to main
     if userY < -398 and userX > -200 and userX < 200 and room == 1:
-        windowPic = 'MainRoom.gif'
+        windowPic = 'src/MainRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(userX,395)
@@ -652,7 +635,7 @@ while gameOn == True:
         turtInRoom = 1
     #right to main
     if userX < -398 and userY > -200 and userY < 200 and room == 2:
-        windowPic = 'MainRoom.gif'
+        windowPic = 'src/MainRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(395,userY)
