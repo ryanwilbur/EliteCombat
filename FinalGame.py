@@ -4,21 +4,21 @@ import random
 import time
 import math
 def moveforward():
-  global speed
-  user.forward(speed)
-  return
+    global speed
+    user.forward(speed)
+    return
 def moveback():
-  global speed
-  user.forward(-speed)
-  return
+    global speed
+    user.forward(-speed)
+    return
 def turnleft():
-  global speed
-  user.left(speed)
-  return
+    global speed
+    user.left(speed)
+    return
 def turnright():
-  global speed
-  user.right(speed)
-  return
+    global speed
+    user.right(speed)
+    return
 def sidestep_left():
     global speed
     bearing = user.heading()
@@ -650,6 +650,11 @@ while gameOn == True:
         teleportTurt.goto(268,268)
         teleportTurt.showturtle()
         turtInRoom = 1
+     # make sure user does not go out of bounds
+     if userX > 400 or userX < -400 or  userY > 400 or userY < -400:
+        user.hideturtle()
+        user.goto(0, 0)
+        user.showturtle()
 
 
     if room == 2 and turtle_count == 1:
@@ -980,7 +985,7 @@ while gameOn == True:
             enemy1turt.hideturtle()
             enemy1turt.goto(1000,1000)
             turtle_count = 2
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
             heath = 100
@@ -989,7 +994,7 @@ while gameOn == True:
             enemy1turt.goto(1000,1000)
             turtle_count = 3
             heath = 110
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 3:
@@ -997,7 +1002,7 @@ while gameOn == True:
             enemy2turt.goto(1000,1000)
             turtle_count = 4
             heath = 120
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 4:
@@ -1005,7 +1010,7 @@ while gameOn == True:
             enemy2turt.goto(1000,1000)
             turtle_count = 5
             heath = 120
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 5:
@@ -1013,7 +1018,7 @@ while gameOn == True:
             enemy3turt.goto(1000,1000)
             turtle_count = 6
             heath = 140
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 6:
@@ -1021,7 +1026,7 @@ while gameOn == True:
             enemy3turt.goto(1000,1000)
             turtle_count = 7
             heath = 130
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 7:
@@ -1029,7 +1034,7 @@ while gameOn == True:
             enemy4turt.goto(1000,1000)
             turtle_count = 8
             heath = 160
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 8:
@@ -1037,7 +1042,7 @@ while gameOn == True:
             enemy4turt.goto(1000,1000)
             turtle_count = 9
             heath = 140
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 9:
@@ -1045,7 +1050,7 @@ while gameOn == True:
             enemy5turt.goto(1000,1000)
             turtle_count = 10
             heath = 180
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 10:
@@ -1053,7 +1058,7 @@ while gameOn == True:
             enemy5turt.goto(1000, 1000)
             turtle_count = 11
             heath = 150
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 11:
@@ -1061,7 +1066,7 @@ while gameOn == True:
             enemy6turt.goto(1000, 1000)
             turtle_count = 12
             heath = 200
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 12:
@@ -1069,7 +1074,7 @@ while gameOn == True:
             enemy6turt.goto(1000, 1000)
             turtle_count = 13
             heath = 160
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 13:
@@ -1077,7 +1082,7 @@ while gameOn == True:
             enemy7turt.goto(1000, 1000)
             turtle_count = 14
             heath = 220
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 14:
@@ -1085,7 +1090,7 @@ while gameOn == True:
             enemy7turt.goto(1000, 1000)
             turtle_count = 15
             heath = 170
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 15:
@@ -1093,7 +1098,7 @@ while gameOn == True:
             enemy8turt.goto(1000, 1000)
             turtle_count = 16
             heath = 240
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 16:
@@ -1101,7 +1106,7 @@ while gameOn == True:
             enemy8turt.goto(1000, 1000)
             turtle_count = 17
             heath = 180
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 17:
@@ -1109,7 +1114,7 @@ while gameOn == True:
             enemy9turt.goto(1000, 1000)
             turtle_count = 18
             heath = 260
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
         elif turtle_count == 18:
@@ -1117,14 +1122,14 @@ while gameOn == True:
             enemy9turt.goto(1000, 1000)
             turtle_count = 1
             heath = 100
-            points+=1
+            points += 1
             pointTurtle.clear()
             pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
 
     if heathBoss <= 0:
         bossTurt.hideturtle()
         line.penup()
-        line.goto(0,0)
+        line.goto(0, 0)
         line.write('YOU WIN!', font=('Times New Roman', 20, 'normal'))
         time.sleep(2)
         gameOn = False
@@ -1132,7 +1137,7 @@ while gameOn == True:
 
     elif heathUser <= 0:
         line.penup()
-        line.goto(0,0)
+        line.goto(0, 0)
         line.write('You lost.', font=('Times New Roman', 20, 'normal'))
         time.sleep(2)
         gameOn = False
