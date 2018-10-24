@@ -1,4 +1,10 @@
-__author__ = 'rwilbur'
+__author__ = 'rwilbur
+#TODO: 
+#add a save function, maybe just write level and points and upgrades to a file
+#add it so if you go off the screen it will bring you back to the middle
+#cleanup file structure (done-ish)
+
+
 import turtle
 import random
 import time
@@ -273,7 +279,7 @@ def teleBossRoom(t1,t2):
         userHeathTurt.write(mainHeathuser, font=('Times New Roman', 20, 'normal'))
         room = 3
     elif d <= 50 and room == 3:
-        windowPic = 'src/MainRoom.gif'
+        windowPic = 'src/room/MainRoom.gif'
         window.bgpic(windowPic)
         jackHeath.showturtle()
         jackSpeed.showturtle()
@@ -321,29 +327,29 @@ window.addshape(strengthUpgrade)
 window.addshape(speedUpgrade)
 window.addshape(healthUpgrade)
 
-boss = ('src/Boss.gif')
-bossAttack = ('src/BossAttack.gif')
-bossRoom = ('src/BossRoom.gif')
-enemy1 = ('src/Enemy1.gif')
-enemy2 = ('src/Enemy2.gif')
-enemy3 = ('src/Enemy3.gif')
-enemy4 = ('src/Enemy4.gif')
-enemy5 = ('src/Enemy5.gif')
-enemy6 = ('src/Enemy6.gif')
-enemy7 = ('src/Enemy7.gif')
-enemy8 = ('src/Enemy8.gif')
-enemy9 = ('src/Enemy9.gif')
+boss = ('src/enemy/Boss.gif')
+bossAttack = ('src/enemy/BossAttack.gif')
+bossRoom = ('src/room/BossRoom.gif')
+enemy1 = ('src/enemy/Enemy1.gif')
+enemy2 = ('src/enemy/Enemy2.gif')
+enemy3 = ('src/enemy/Enemy3.gif')
+enemy4 = ('src/enemy/Enemy4.gif')
+enemy5 = ('src/enemy/Enemy5.gif')
+enemy6 = ('src/enemy/Enemy6.gif')
+enemy7 = ('src/enemy/Enemy7.gif')
+enemy8 = ('src/enemy/Enemy8.gif')
+enemy9 = ('src/enemy/Enemy9.gif')
 
 
-enemy1Attack = ('src/Enemy11.gif')
-enemy2Attack = ('src/Enemy22.gif')
-enemy3Attack = ('src/Enemy33.gif')
-enemy4Attack = ('src/Enemy44.gif')
-enemy5Attack = ('src/Enemy55.gif')
-enemy6Attack = ('src/Enemy66.gif')
-enemy7Attack = ('src/Enemy77.gif')
-enemy8Attack = ('src/Enemy88.gif')
-enemy9Attack = ('src/Enemy99.gif')
+enemy1Attack = ('src/enemy/Enemy11.gif')
+enemy2Attack = ('src/enemy/Enemy22.gif')
+enemy3Attack = ('src/enemy/Enemy33.gif')
+enemy4Attack = ('src/enemy/Enemy44.gif')
+enemy5Attack = ('src/enemy/Enemy55.gif')
+enemy6Attack = ('src/enemy/Enemy66.gif')
+enemy7Attack = ('src/enemy/Enemy77.gif')
+enemy8Attack = ('src/enemy/Enemy88.gif')
+enemy9Attack = ('src/enemy/Enemy99.gif')
 
 window.addshape(boss)
 window.addshape(bossAttack)
@@ -551,8 +557,8 @@ pointTurtle.pendown()
 pointTurtle.pencolor('white')
 pointTurtle.write(points, font=('Times New Roman', 20, 'normal'))
 
-windowPic = 'src/MainRoom.gif'
-window.bgpic('src/MainRoom.gif')
+windowPic = 'src/room/MainRoom.gif'
+window.bgpic('src/room/MainRoom.gif')
 user.showturtle()
 turtInRoom = 1
 T = 1
@@ -592,7 +598,7 @@ while gameOn == True:
 
     #main to top
     if userY > 398 and userX > -200 and userX < 200 and room == 0:
-        windowPic = 'src/TopRoom.gif'
+        windowPic = 'src/room/TopRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(userX,-395)
@@ -605,7 +611,7 @@ while gameOn == True:
         teleportTurt.goto(1000,1000)
     #main to right
     if userX > 398 and userY > -200 and userY < 200 and room == 0:
-        windowPic = 'src/RightRoom.gif'
+        windowPic = 'src/room/RightRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(-395,userY)
@@ -618,7 +624,7 @@ while gameOn == True:
         teleportTurt.goto(1000,1000)
     #top to main
     if userY < -398 and userX > -200 and userX < 200 and room == 1:
-        windowPic = 'src/MainRoom.gif'
+        windowPic = 'src/room/MainRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(userX,395)
@@ -635,7 +641,7 @@ while gameOn == True:
         turtInRoom = 1
     #right to main
     if userX < -398 and userY > -200 and userY < 200 and room == 2:
-        windowPic = 'src/MainRoom.gif'
+        windowPic = 'src/room/MainRoom.gif'
         window.bgpic(windowPic)
         user.hideturtle()
         user.goto(395,userY)
